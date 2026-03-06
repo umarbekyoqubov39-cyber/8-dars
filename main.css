@@ -486,6 +486,7 @@ margin-bottom: 20px;
   line-height: 28px;
 }
 .cards {
+  flex-wrap: wrap;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -499,7 +500,20 @@ margin-bottom: 20px;
   border: 1px solid #E5E7EB;
   border-radius: 12px;
   overflow: hidden;
+ transition: all 0.5s;
 }
+.card:hover{
+  transform: translate(20px,30px);
+  img{
+    transform: scale(1.1);
+  }
+  h2{
+    color: blue;
+  }
+
+}
+
+
 .data {
   padding-top: 10px;
   padding-left: 5px;
@@ -533,4 +547,10 @@ margin-bottom: 20px;
 .fa-solid {
 }
 .fa-arrow-right {
+}
+@media(max-width:1300px){
+  .card{
+  width: 100%;
+
+  }
 }
